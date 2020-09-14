@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        body {
+            font-family: Arial}
+        #Box {
+            background:pink;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1>Welcome to the jquery</h1>
+    <div id="Box" class="test">
+        <h2>Test Box</h2>
+        <p>If you don't want to download and host jQuery yourself, 
+            you can include it from a CDN (Content Delivery Network).</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#Box').click(function(){
+                $('#Box').css('background-color','green');
+            });
+        });
+
+    </script>
+</body>
+</html>
