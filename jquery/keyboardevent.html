@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboardevent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery</title>
     <style>
         body {
@@ -13,8 +16,6 @@
             border: 1px solid #000;
         }
     </style>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 <body>
     <h1>Welcome to the jquery</h1>
@@ -26,21 +27,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script>
         $(document).ready(function(){
-            $('#Box').click(function(){
-                $('#Box').css('background-color','green');
+            $('body').keypress(function(){
+                $(this).css('background-color','orange');
             });
-        });
-        $('#Box').dblclick(function(){
-            $('#Box').css('background-color','orange');
-        });
-        $('#Box').contextmenu(function(){
-            $('#Box').css('background-color','blue');
-        });
-        $('#Box').mouseenter(function(){
-            $('#Box').css('background-color','tan');
-        });
-        $('#Box').mouseleave(function(){
-            $('#Box').css('background-color','purple');
+            $('body').keydown(function(){
+                $(this).css('background-color','orange');
+            });
+            $('body').keyup(function(){
+                $(this).css('background-color','blue');
+            });
         });
     </script>
 </body>
