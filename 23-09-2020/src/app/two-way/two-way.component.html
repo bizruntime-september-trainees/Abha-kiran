@@ -1,0 +1,28 @@
+
+
+<input type="text" value="abha" [(ngModel)]="uname">
+<br><br>
+<p>{{uname}}</p>
+<div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text"
+             placeholder="Datepicker"
+             class="form-control"
+             bsDatepicker>
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text"
+             placeholder="Daterangepicker"
+             class="form-control"
+             bsDaterangepicker>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
+  [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
+</button>
+<hr>
+<div id="collapseBasic" [collapse]="isCollapsed">
+<div class="well well-lg card card-block card-header">I am Abha kiran .</div>
+</div>
+<timepicker [(ngModel)]="mytime"></timepicker>
+<pre class="alert alert-info">Time is: {{mytime}}</pre>
