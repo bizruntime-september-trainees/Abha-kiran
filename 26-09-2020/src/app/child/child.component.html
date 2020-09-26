@@ -1,0 +1,5 @@
+<div class="col-md-12 bg-success text-white text-center py-8">
+    <h2 *ngIf="!productSelected">please select any products</h2>
+    <h2 *ngIf="productSelected">{{selectedProduct}} is selected</h2>
+    <button class="btn" (click)="onAddProduct()">Add to card</button>
+</div>

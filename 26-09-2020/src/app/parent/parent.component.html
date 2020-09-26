@@ -1,0 +1,48 @@
+<div class="page-area">
+    <div class="text-center">
+        <h2>Buy PRODUCTS</h2> 
+    </div>
+    <div class="alert alert-light border d-flex align-items-center" *ngIf="addedProduct">
+        <strong class="text-success">{{addedProduct}}</strong> &nbsp;is selected and Added in a card
+        <button class="btn btn-success ml-auto">Checkout</button>
+    </div>
+    <hr class="col-md-3">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <img src="../../assets/Image/laptop-img.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                    
+                    <button class="btn btn-success" (click)="onSelectProduct('Laptop')">select this product</button>
+                </div>
+                <div class="card">
+                    <img src="../../assets/Image/mobile-img.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile</h5>
+                        
+                        <button class="btn btn-success" (click)="onSelectProduct('Mobile')">select this product</button>
+                    </div>
+                    <div class="card">
+                        <img src="../../assets/Image/tv-img.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tv</h5>
+                            <button class="btn btn-success" (click)="onSelectProduct('Tv')">select this product</button>
+                        </div>
+                        <div class="card">
+                            <img src="../../assets/Image/washingmachine-img.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Washing Machine</h5>
+                                <button class="btn btn-success" (click)="onSelectProduct('Washing Machine')">select this product</button>
+                            </div>
+                    </div>
+                </div>
+               
+              <app-child class="w-100"
+               [productSelected]="proSelected"
+                [selectedProduct]="selProduct"
+                (addedProduct)="onAddedProduct($event)"
+                ></app-child>
+                
+            </div>
+        </div>
